@@ -26,7 +26,7 @@ var program = require('commander');
 var cheerio = require('cheerio');
 var rest = require('restler');
 var HTMLFILE_DEFAULT = "index.html";
-var URLFILE_DEFAULT = "";
+var URLFILE_DEFAULT = "http://shielded-brushlands-5741.herokuapp.com";
 var CHECKSFILE_DEFAULT = "checks.json";
 
 var assertFileExists = function(infile) {
