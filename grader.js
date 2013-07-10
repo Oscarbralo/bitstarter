@@ -38,6 +38,7 @@ process.exit(1); // http://nodejs.org/api/process.html#process_process_exit_code
 return instr;
 };
 
+var jsonFile = "jsonFile.txt";
 var cheerioHtmlFile = function(htmlfile) {
 return cheerio.load(fs.readFileSync(htmlfile));
 };
@@ -68,6 +69,7 @@ out[checks[ii]] = present;
 }
 var outJson = JSON.stringify(out, null, 4);
 console.log(outJson);
+fs.writeFileSync(jsonFile, outJson);
 return;
 });
 };
